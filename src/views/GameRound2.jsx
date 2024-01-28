@@ -13,7 +13,7 @@ import {
 import { useState } from 'react';
 
 export const GameRound2 = () => {
-	const [started, setStarted] = useState(false);
+	const [mode, setMode] = useState('instructions');
 
 	const dispatch = useDispatch();
 	const { mazo, current, currentTeam } = useSelector((state) => state.game);
@@ -34,58 +34,87 @@ export const GameRound2 = () => {
 		dispatch(getCard());
 	};
 
+	const readyUp = () => {
+		setMode('ready');
+	};
+
 	const startRound = () => {
-		setStarted(true);
+		setMode('playing');
 	};
 
 	const endTurn = () => {
+		setMode('ready');
 		dispatch(toggleTeam());
 		dispatch(getCard());
 	};
 
-	return (
-		<>
-			{!started ? (
-				<Grid container direction='column' justifyContent='center'>
-					<Grid container direction='row' justifyContent='center'>
-						<h1>Ronda 2</h1>
+	const renderSwitch = (mode) => {
+		switch (mode) {
+			case 'instructions':
+				return (
+					<Grid container direction='column' justifyContent='center'>
+						<Grid container direction='row' justifyContent='center'>
+							<h1>Ronda 2</h1>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<h2>Instrucciones:</h2>
+						</Grid>
+						<hr />
+						<Grid container direction='row' justifyContent='center'>
+							<p>
+								QUIEN DA PISTAS PUEDE: Decir una sola palabra
+								por tarjeta (y repetirla todas las veces que
+								quiera). Actuar. Pasar: podrá decir “paso” y
+								colocar la tarjeta boca abajo a un costado.
+								Luego podrá seguir con la tarjeta siguiente.
+							</p>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<p>
+								QUIEN ADIVINA PUEDE: Arriesgar una sola vez por
+								tarjeta, por equipo
+							</p>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<p>
+								QUIEN DA PISTAS NO PUEDE: A excepción de “pasar”
+								no puede hacer ninguna de las cosas prohibidas
+								en la ronda 1. Usar más de una palabra ni emitir
+								sonidos.
+							</p>
+						</Grid>
+						<Button
+							onClick={readyUp}
+							variant='contained'
+							color='success'
+							size='large'>
+							Empezar!
+						</Button>
 					</Grid>
-					<Grid container direction='row' justifyContent='center'>
-						<h2>Instrucciones:</h2>
-					</Grid>
-					<hr />
-					<Grid container direction='row' justifyContent='center'>
-						<p>
-							QUIEN DA PISTAS PUEDE: Decir una sola palabra por
-							tarjeta (y repetirla todas las veces que quiera).
-							Actuar. Pasar: podrá decir “paso” y colocar la
-							tarjeta boca abajo a un costado. Luego podrá seguir
-							con la tarjeta siguiente.
-						</p>
-					</Grid>
-					<Grid container direction='row' justifyContent='center'>
-						<p>
-							QUIEN ADIVINA PUEDE: Arriesgar una sola vez por
-							tarjeta, por equipo
-						</p>
-					</Grid>
-					<Grid container direction='row' justifyContent='center'>
-						<p>
-							QUIEN DA PISTAS NO PUEDE: A excepción de “pasar” no
-							puede hacer ninguna de las cosas prohibidas en la
-							ronda 1. Usar más de una palabra ni emitir sonidos.
-						</p>
-					</Grid>
-					<Button
-						onClick={startRound}
-						variant='contained'
-						color='success'
-						size='large'>
-						Empezar!
-					</Button>
-				</Grid>
-			) : (
-				<>
+				);
+				break;
+
+			case 'ready':
+				return (
+					<>
+						<Grid container direction='row' justifyContent='center'>
+							<h1> Juega el equipo {currentTeam}</h1>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<Button
+								onClick={startRound}
+								variant='contained'
+								color='success'
+								size='large'>
+								Empezar
+							</Button>
+						</Grid>
+					</>
+				);
+				break;
+
+			case 'playing':
+				return (
 					<Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<h1>Equipo {currentTeam}</h1>
@@ -123,8 +152,10 @@ export const GameRound2 = () => {
 							</Button>
 						</Grid>
 					</Grid>
-				</>
-			)}
-		</>
-	);
+				);
+				break;
+		}
+	};
+
+	return <>{renderSwitch(mode)}</>;
 };
