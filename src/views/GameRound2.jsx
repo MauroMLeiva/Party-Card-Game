@@ -11,6 +11,7 @@ import {
 	toggleTeam,
 } from '../store/gameSlice';
 import { useState } from 'react';
+import MyTimer from '../components/Timer';
 
 export const GameRound2 = () => {
 	const [mode, setMode] = useState('instructions');
@@ -47,6 +48,14 @@ export const GameRound2 = () => {
 		dispatch(toggleTeam());
 		dispatch(getCard());
 	};
+
+	const resetTimer = () => {
+		const time = new Date();
+		time.setSeconds(time.getSeconds() + 30);
+		return time;
+	};
+
+	const time = resetTimer();
 
 	const renderSwitch = (mode) => {
 		switch (mode) {
@@ -118,6 +127,12 @@ export const GameRound2 = () => {
 					<Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<h1>Equipo {currentTeam}</h1>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<MyTimer
+								expiryTimestamp={time}
+								onExpire={endTurn}
+							/>
 						</Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<GameCard carta={current} />

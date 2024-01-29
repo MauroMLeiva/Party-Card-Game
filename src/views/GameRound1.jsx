@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useTimer } from 'react-timer-hook';
 import { Button, Grid } from '@mui/material';
 import { GameCard } from '../components/GameCard';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +10,7 @@ import {
 	startRound2,
 	toggleTeam,
 } from '../store/gameSlice';
-import { useState } from 'react';
+import MyTimer from '../components/Timer';
 
 export const GameRound1 = () => {
 	const [mode, setMode] = useState('instructions');
@@ -24,6 +26,14 @@ export const GameRound1 = () => {
 			dispatch(startRound2());
 		}
 	};
+
+	const resetTimer = () => {
+		const time = new Date();
+		time.setSeconds(time.getSeconds() + 30);
+		return time;
+	};
+
+	const time = resetTimer();
 
 	const readyUp = () => {
 		setMode('ready');
@@ -112,6 +122,12 @@ export const GameRound1 = () => {
 					<Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<h1>Equipo {currentTeam}</h1>
+						</Grid>
+						<Grid container direction='row' justifyContent='center'>
+							<MyTimer
+								expiryTimestamp={time}
+								onExpire={endTurn}
+							/>
 						</Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<GameCard carta={current} />

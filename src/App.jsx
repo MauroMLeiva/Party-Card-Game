@@ -44,8 +44,7 @@ export const App = () => {
 
 	return (
 		<>
-			<h1>Card Game</h1>
-
+			<h1>.</h1>
 			{renderSwitch(status)}
 			{/* <GameSettings /> */}
 			{/* <ChooseCards /> */}
