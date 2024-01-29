@@ -14,19 +14,27 @@ export const GameCard = ({
 	let isChosen = selected.includes(carta);
 
 	return (
-		<Box sx={{ widht: 100, height: 400, mr: 2 }}>
+		<Box sx={{ widht: 100, height: 500, mr: 2 }}>
 			<Card
 				variant='outlined'
 				sx={{
-					backgroundColor: '#fafafa',
+					backgroundColor: '#f3f0e9',
 					width: 300,
 					heigth: 400,
 					border: isChosen ? '3px solid green' : 'none',
-				}}>
+					borderRadius: 4,
+				}}
+				className='animate__animated animate__fadeIn'>
 				<CardContent>
-					<Box sx={{ backgroundColor: '#e64550', mt: 2 }}>
+					<Box
+						sx={{
+							backgroundColor: '#e64550',
+							mt: 2,
+							height: 90,
+							borderRadius: 1,
+						}}>
 						<Typography
-							sx={{ fontSize: 14 }}
+							sx={{ fontSize: 14, fontWeight: 'bold' }}
 							color='text.secondary'
 							gutterBottom>
 							Título
@@ -36,9 +44,15 @@ export const GameCard = ({
 						</Typography>
 					</Box>
 
-					<Box sx={{ backgroundColor: '#45dbe6', mt: 2 }}>
+					<Box
+						sx={{
+							backgroundColor: '#45dbe6',
+							mt: 2,
+							height: 90,
+							borderRadius: 1,
+						}}>
 						<Typography
-							sx={{ fontSize: 14 }}
+							sx={{ fontSize: 14, fontWeight: 'bold' }}
 							color='text.secondary'
 							gutterBottom>
 							Personaje
@@ -48,9 +62,15 @@ export const GameCard = ({
 						</Typography>
 					</Box>
 
-					<Box sx={{ backgroundColor: '#45e660', mt: 2 }}>
+					<Box
+						sx={{
+							backgroundColor: '#45e660',
+							mt: 2,
+							height: 90,
+							borderRadius: 1,
+						}}>
 						<Typography
-							sx={{ fontSize: 14 }}
+							sx={{ fontSize: 14, fontWeight: 'bold' }}
 							color='text.secondary'
 							gutterBottom>
 							Vale Todo
@@ -61,8 +81,13 @@ export const GameCard = ({
 					</Box>
 
 					<Typography
-						sx={{ mt: 2, fontSize: 24, textAlign: 'center' }}
-						color='text.secondary'>
+						sx={{
+							mt: 2,
+							fontSize: 24,
+							textAlign: 'center',
+							fontWeight: 'bold',
+						}}
+						color='#191919'>
 						{carta.palabraClave}
 					</Typography>
 				</CardContent>

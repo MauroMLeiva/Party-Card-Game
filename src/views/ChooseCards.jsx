@@ -42,7 +42,15 @@ export const ChooseCards = () => {
 	};
 	return (
 		<>
-			<Grid container>
+			<Grid
+				container
+				direction='row'
+				justifyContent='center'
+				sx={{ mb: 2, mt: 1 }}>
+				<h1>Elegí 5 cartas</h1>
+			</Grid>
+
+			<Grid container direction='row' justifyContent='center'>
 				{selection.map((carta) => (
 					<GameCard
 						key={carta.titulo.nombre}
@@ -53,15 +61,20 @@ export const ChooseCards = () => {
 					/>
 				))}
 			</Grid>
-			<Grid container direction='row' justifyContent='center'>
-				<Button
-					size='large'
-					color='success'
-					variant='contained'
-					onClick={handleSelection}>
-					Terminar selección
-				</Button>
-			</Grid>
+
+			{selected.length == 5 ? (
+				<Grid container direction='row' justifyContent='center'>
+					<Button
+						size='large'
+						color='success'
+						variant='contained'
+						onClick={handleSelection}>
+						Terminar selección
+					</Button>
+				</Grid>
+			) : (
+				<></>
+			)}
 		</>
 	);
 };
