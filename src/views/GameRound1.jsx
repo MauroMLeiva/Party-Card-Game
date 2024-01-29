@@ -88,13 +88,22 @@ export const GameRound1 = () => {
 								equipo adivine o hasta que se termine el tiempo.
 							</p>
 						</Grid>
-						<Button
-							onClick={readyUp}
-							variant='contained'
-							color='success'
-							size='large'>
-							Empezar!
-						</Button>
+
+						<Grid alignSelf='center'>
+							<Button
+								onClick={readyUp}
+								variant='contained'
+								color='success'
+								size='large'
+								sx={{
+									height: 100,
+									width: 200,
+									mt: 3,
+									borderRadius: 3,
+								}}>
+								Empezar!
+							</Button>
+						</Grid>
 					</Grid>
 				);
 				break;
@@ -107,6 +116,7 @@ export const GameRound1 = () => {
 						</Grid>
 						<Grid container direction='row' justifyContent='center'>
 							<Button
+								sx={{ mt: 3 }}
 								onClick={startRound}
 								variant='contained'
 								color='success'
