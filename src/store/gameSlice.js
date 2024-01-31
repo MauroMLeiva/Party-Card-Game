@@ -3,7 +3,7 @@ import { cartas } from '../helpers/cartas';
 import { shuffle } from '../helpers/shuffle';
 
 const initialState = {
-	status: 'choose',
+	status: 'setup',
 	// menu, setup, choose, round1, round2, relampago, round3, fin
 	teams: 2,
 	scores: [0, 0],

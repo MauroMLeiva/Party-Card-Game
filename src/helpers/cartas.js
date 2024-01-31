@@ -645,4 +645,349 @@ export const cartas = [
 		},
 		palabraClave: 'México',
 	},
+	{
+		titulo: {
+			nombre: '101 Dálmatas',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Snoopy',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Cucha',
+			categoría: '',
+		},
+		palabraClave: 'Perro',
+	},
+	{
+		titulo: {
+			nombre: 'Los Croods',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Pedro Picapiedra',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Cavernas',
+			categoría: '',
+		},
+		palabraClave: 'Prehistoria',
+	},
+	{
+		titulo: {
+			nombre: 'Búsqueda Implacable',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'James Bond',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Arsenal',
+			categoría: '',
+		},
+		palabraClave: 'Armas',
+	},
+	{
+		titulo: {
+			nombre: 'El cadáver de la novia',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Merlina',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Tim Burton',
+			categoría: '',
+		},
+		palabraClave: 'Terror',
+	},
+	{
+		titulo: {
+			nombre: 'El beso de la mujer araña',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Spider Man',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Viuda negra',
+			categoría: '',
+		},
+		palabraClave: 'Araña',
+	},
+	{
+		titulo: {
+			nombre: 'Casados con hijos',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Capusotto',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Tango',
+			categoría: '',
+		},
+		palabraClave: 'Argentina',
+	},
+	{
+		titulo: {
+			nombre: 'Gatubela',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Harley Quinn',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Hiedra venenosa',
+			categoría: '',
+		},
+		palabraClave: 'Villana',
+	},
+	{
+		titulo: {
+			nombre: 'Narnia',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Scar',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Thundercats',
+			categoría: '',
+		},
+		palabraClave: 'León',
+	},
+	{
+		titulo: {
+			nombre: 'Coco',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Catrina',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Halloween',
+			categoría: '',
+		},
+		palabraClave: 'Muerto',
+	},
+	{
+		titulo: {
+			nombre: 'Chiquititas',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Floricienta',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Casi angeles',
+			categoría: '',
+		},
+		palabraClave: 'Cris Morena',
+	},
+	{
+		titulo: {
+			nombre: 'Game of Thrones',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Rey Arturo',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Vikingos',
+			categoría: '',
+		},
+		palabraClave: 'Medieval',
+	},
+	{
+		titulo: {
+			nombre: 'Yo, Robot',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Terminator',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Inteligencia Artificial',
+			categoría: '',
+		},
+		palabraClave: 'Máquina',
+	},
+	{
+		titulo: {
+			nombre: 'La guerra de los mundos',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Stitch',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Marte',
+			categoría: '',
+		},
+		palabraClave: 'Extraterrestre',
+	},
+	{
+		titulo: {
+			nombre: 'La máscara',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'El Zorro',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Disfraz',
+			categoría: '',
+		},
+		palabraClave: 'Antifaz',
+	},
+	{
+		titulo: {
+			nombre: 'El lagarto Juancho',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Oso Yogui',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Zoológico',
+			categoría: '',
+		},
+		palabraClave: 'Animal',
+	},
+	{
+		titulo: {
+			nombre: 'Toy Story',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Chucky',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Barbie',
+			categoría: '',
+		},
+		palabraClave: 'Juguete',
+	},
+	{
+		titulo: {
+			nombre: 'Cazafantasmas',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Casper',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Actividad paranormal',
+			categoría: '',
+		},
+		palabraClave: 'Espíritu',
+	},
+	{
+		titulo: {
+			nombre: 'La casa de papel',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Robin Hood',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Alarma',
+			categoría: '',
+		},
+		palabraClave: 'Robo',
+	},
+	{
+		titulo: {
+			nombre: 'Como si fuera la primera vez',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Dory',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'No me olvides',
+			categoría: '',
+		},
+		palabraClave: 'Memoria',
+	},
+	{
+		titulo: {
+			nombre: 'Frankenstein',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Godzilla',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Yeti',
+			categoría: '',
+		},
+		palabraClave: 'Monstruo',
+	},
+	{
+		titulo: {
+			nombre: 'Cars',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Ferrari',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Fórmula 1',
+			categoría: '',
+		},
+		palabraClave: 'Carrera',
+	},
+	{
+		titulo: {
+			nombre: 'El diablo viste a la moda',
+			categoría: '',
+		},
+		personaje: {
+			nombre: 'Cruella DeVille',
+			categoría: '',
+		},
+		valeTodo: {
+			nombre: 'Vestido',
+			categoría: '',
+		},
+		palabraClave: 'Ropa',
+	},
+	// {
+	// 	titulo: {
+	// 		nombre: '',
+	// 		categoría: '',
+	// 	},
+	// 	personaje: {
+	// 		nombre: '',
+	// 		categoría: '',
+	// 	},
+	// 	valeTodo: {
+	// 		nombre: '',
+	// 		categoría: '',
+	// 	},
+	// 	palabraClave: '',
+	// },
 ];
